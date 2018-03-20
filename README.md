@@ -1,6 +1,6 @@
 # DFA Sandbox
 
-##Setup
+## Setup
 
 1. Install Node
 2. Install Gulp globally `npm install --global gulp-cli`
