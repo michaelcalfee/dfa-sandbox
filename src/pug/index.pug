@@ -1,0 +1,20 @@
+extends _layouts/master.layout.pug
+
+block currentPageDefinition
+	script.
+		window._currentPage = { type: "Page", params: {} };
+
+block pageClasses
+	- var pageClasses = "page"
+
+block header
+	include _incs/header.pug
+
+block content
+	.container
+		p Here is some content.
+		
+	
+	
+
+	
