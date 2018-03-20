@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-// Angular DIST output folder
+// output folder
 app.use(express.static(path.join(__dirname, 'static/html')));
 
 // Start the app by listening on the default Heroku port

@@ -8,7 +8,9 @@
   "private": true,
   "repository": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "gulp build",
+    "postinstall": "gulp build"
   },
   "dependencies": {
     "autoprefixer": "6.3.3",
