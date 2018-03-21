@@ -20,6 +20,7 @@ body {
 	right: 0;
 	top: 0;
 	transition: top ease-in 0.1s;
+	will-change: top;
 }
 
 section {
