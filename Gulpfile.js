@@ -147,9 +147,6 @@ gulp.task('copy-assets', function() {
     .pipe(gulp.dest('static/fonts/'));  
   gulp.src('src/img/**/*.{svg,png,jpg,gif,ico}')
     .pipe(gulp.dest('static/img/'));
-  gulp.src('src/icons/icomoon/symbol-defs.svg')
-    .pipe(rename('icons.svg'))
-    .pipe(gulp.dest('static/img/'));
 });
 
 /**
