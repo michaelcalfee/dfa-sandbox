@@ -11,12 +11,10 @@ var ContentPage = function() {
 utils.extend(Page, ContentPage, {
 
     init: function() {
-
         Page.prototype.init.apply(this, arguments);
-
         this.sections = document.querySelectorAll('section');
         this.chart = document.querySelectorAll('.chart')[0];
-
+        this.sections.forEach(bind(this.updateView, this));
         window.addEventListener('scroll', throttle(bind(this.onScroll_window, this), 100));
     },
 
@@ -30,10 +28,9 @@ utils.extend(Page, ContentPage, {
 
         //update the chart content based on active section
         if (utils.isInView(el) === true) {
-            utils.log(el.firstElementChild.innerHTML + ' is in view.');
             if (utils.getElementOffset(this.chart).top >=  utils.getElementOffset(el).top) {
                 //update the chart content
-                this.chart.innerHTML = el.firstElementChild.innerHTML;
+                this.chart.innerHTML = el.firstElementChild.innerHTML + ' is active';
             }
         }
     }
